@@ -1,0 +1,7 @@
+#display {
+  border: thick purple solid;
+  height: 500px;
+  width: auto;
+  font-size: 75px;
+  /* background-color: green; */
+}

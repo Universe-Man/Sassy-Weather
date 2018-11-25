@@ -12,7 +12,6 @@ class GodContainer extends React.Component {
   render() {
     return(
       <div id='god-container'>
-        yay today!
         <Display />
         <UserInput />
       </div>
