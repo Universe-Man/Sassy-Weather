@@ -15,7 +15,13 @@ class GodContainer extends React.Component {
   getUserInput = (event) => {
     this.setState({
       userSubmittedText: event.target.value
-    })
+    }, () => {console.log("user in state", this.state.userSubmittedText)})
+  }
+
+  userPressingEnterToSubmit = (event) => {
+    console.log("here");
+    event.preventDefault();
+    // ADD MESSAGE OF RIDICULE LATER
   }
 
 
@@ -24,7 +30,7 @@ class GodContainer extends React.Component {
       <div id='god-container'>
         <Display textDisplayed={this.state.textDisplayed}/>
         <br/>
-        <UserInput getUserInput={this.getUserInput}/>
+        <UserInput getUserInput={this.getUserInput} userPressingEnterToSubmit={this.userPressingEnterToSubmit}/>
       </div>
     )
   }
