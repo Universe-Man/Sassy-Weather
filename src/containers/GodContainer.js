@@ -17,7 +17,6 @@ class GodContainer extends React.Component {
       </div>
     )
   }
-
 }
 
 export default GodContainer;
