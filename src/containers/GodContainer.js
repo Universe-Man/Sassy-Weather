@@ -7,16 +7,24 @@ class GodContainer extends React.Component {
   constructor() {
     super();
     this.state = {
-      textDisplayed: "oh my gerd!!"
+      textDisplayed: "oh my gerd!!",
+      userSubmittedText: "",
     }
   }
+
+  getUserInput = (event) => {
+    this.setState({
+      userSubmittedText: event.target.value
+    })
+  }
+
 
   render() {
     return(
       <div id='god-container'>
         <Display textDisplayed={this.state.textDisplayed}/>
         <br/>
-        <UserInput />
+        <UserInput getUserInput={this.getUserInput}/>
       </div>
     )
   }

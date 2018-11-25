@@ -11,7 +11,7 @@ class UserInput extends React.Component {
     return(
       <div id='user-input-div'>
         <form>
-          <input id='user-input-field' autoFocus='autofocus' type='text' placeholder='Enter Location'/>
+          <input id='user-input-field' onChange={this.props.getUserInput} autoFocus='autofocus' type='text' placeholder='Enter Location'/>
           <br/>
           <br/>
           <button id='user-submit-1'>Submit</button> -OR- <button id='user-submit-2'>Better Submit</button>
