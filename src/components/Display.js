@@ -5,6 +5,8 @@ const Display = (props) => {
   return(
     <div id='display'>
       yay today!!
+      <br/>
+      {props.textDisplayed}
     </div>
   )
 }

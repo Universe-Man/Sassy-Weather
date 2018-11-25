@@ -6,13 +6,16 @@ import UserInput from '../components/UserInput.js';
 class GodContainer extends React.Component {
   constructor() {
     super();
-    this.state = {}
+    this.state = {
+      textDisplayed: "oh my gerd!!"
+    }
   }
 
   render() {
     return(
       <div id='god-container'>
-        <Display />
+        <Display textDisplayed={this.state.textDisplayed}/>
+        <br/>
         <UserInput />
       </div>
     )
