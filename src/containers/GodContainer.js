@@ -20,7 +20,9 @@ class GodContainer extends React.Component {
 
   userSubmitsLocation = (event) => {
     let location_id = "5333180"
-    fetch()
+    fetch(APIURL)
+      .then(res => res.json())
+      .then(json => console.log("fetched!", json))
   }
 
 
