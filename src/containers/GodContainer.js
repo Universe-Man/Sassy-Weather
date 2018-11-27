@@ -4,7 +4,6 @@ import Display from '../components/Display.js';
 import UserInput from '../components/UserInput.js';
 let location_id = ""
 const APIKEY = "f617c0219a716da6b8495f3be12cbaf1"
-const APIURL = `api.openweathermap.org/data/2.5/forecast?id=${location_id}&APPID=${APIKEY}`
 
 class GodContainer extends React.Component {
   constructor() {
@@ -19,9 +18,18 @@ class GodContainer extends React.Component {
   }
 
   userSubmitsLocation = (event) => {
+    console.log("clicked!");
+    // debugger
     let location_id = "5333180"
-    fetch(APIURL)
-      .then(res => res.json())
+    // debugger
+    fetch(`api.openweathermap.org/data/2.5/forecast?id=${location_id}&APPID=${APIKEY}`, {
+      headers : {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+       }
+
+    })
+      // .then(res => res.json())
       .then(json => console.log("fetched!", json))
   }
 
@@ -97,7 +105,7 @@ class GodContainer extends React.Component {
       <div id='god-container'>
         <Display textDisplayed={this.state.textDisplayed}/>
         <br/>
-        <UserInput getUserInput={this.getUserInput} userPressingEnterToSubmit={this.userPressingEnterToSubmit} submissionError={this.state.submissionError} submissionErrorText={this.state.submissionErrorText}/>
+        <UserInput getUserInput={this.getUserInput} userPressingEnterToSubmit={this.userPressingEnterToSubmit} submissionError={this.state.submissionError} submissionErrorText={this.state.submissionErrorText} userSubmitsLocation={this.userSubmitsLocation}/>
       </div>
     )
   }
