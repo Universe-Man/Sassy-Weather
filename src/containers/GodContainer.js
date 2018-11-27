@@ -2,6 +2,9 @@ import React from 'react';
 import GodContainerCSS from '../assets/GodContainerCSS.css';
 import Display from '../components/Display.js';
 import UserInput from '../components/UserInput.js';
+let location_id = ""
+const APIKEY = "f617c0219a716da6b8495f3be12cbaf1"
+const APIURL = `api.openweathermap.org/data/2.5/forecast?id=${location_id}&APPID=${APIKEY}`
 
 class GodContainer extends React.Component {
   constructor() {
@@ -15,14 +18,22 @@ class GodContainer extends React.Component {
     }
   }
 
+  userSubmitsLocation = (event) => {
+    let location_id = "5333180"
+    fetch()
+  }
+
+
+
+
   getUserInput = (event) => {
     this.setState({
       userSubmittedText: event.target.value
     }, () => {console.log("user in state", this.state.userSubmittedText)})
   }
 
+// EASILY ADD ADDITIONAL SASS STATEMENTS AT THE BOTTOM OF THIS FUNCTION
   userPressingEnterToSubmit = (event) => {
-    console.log("here");
     event.preventDefault();
     this.setState({
       submissionError: true
@@ -76,8 +87,6 @@ class GodContainer extends React.Component {
         })
         break;
     }
-
-    // ADD MESSAGE OF RIDICULE LATER
   }
 
 
