@@ -9,6 +9,9 @@ class GodContainer extends React.Component {
     this.state = {
       textDisplayed: "oh my gerd!!",
       userSubmittedText: "",
+      submissionErrorText: "",
+      submissionError: false,
+      submissionErrorText: 0,
     }
   }
 
@@ -21,6 +24,10 @@ class GodContainer extends React.Component {
   userPressingEnterToSubmit = (event) => {
     console.log("here");
     event.preventDefault();
+    this.setState({
+      submissionErrorText: "Hey! Yeah, enter doesn't work here. You gotta click a submit button."
+    })
+
     // ADD MESSAGE OF RIDICULE LATER
   }
 
