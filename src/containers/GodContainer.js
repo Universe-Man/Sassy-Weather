@@ -86,7 +86,7 @@ class GodContainer extends React.Component {
       <div id='god-container'>
         <Display textDisplayed={this.state.textDisplayed}/>
         <br/>
-        <UserInput getUserInput={this.getUserInput} userPressingEnterToSubmit={this.userPressingEnterToSubmit}/>
+        <UserInput getUserInput={this.getUserInput} userPressingEnterToSubmit={this.userPressingEnterToSubmit} submissionError={this.state.submissionError} submissionErrorText={this.state.submissionErrorText}/>
       </div>
     )
   }

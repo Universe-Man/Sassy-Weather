@@ -14,6 +14,13 @@ class UserInput extends React.Component {
           <input id='user-input-field' onChange={this.props.getUserInput}  autoFocus='autofocus' type='text' placeholder='Enter Location'/>
           <br/>
           <br/>
+          {(this.props.submissionError === false) ? ( null ) : (
+            <React.Fragment>
+              {this.props.submissionErrorText}
+              <br/>
+              <br/>
+            </React.Fragment>
+          )}
           <button id='user-submit-1'>Submit</button> -OR- <button id='user-submit-2'>Better Submit</button>
         </form>
       </div>
