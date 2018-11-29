@@ -22,13 +22,7 @@ class GodContainer extends React.Component {
     // debugger
     let location_id = "5333180"
     // debugger
-    fetch(`api.openweathermap.org/data/2.5/forecast?id=${location_id}&APPID=${APIKEY}`, {
-      headers : {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-       }
-
-    })
+    fetch(`http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=f617c0219a716da6b8495f3be12cbaf1`)
       // .then(res => res.json())
       .then(json => console.log("fetched!", json))
   }
