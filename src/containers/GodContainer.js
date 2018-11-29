@@ -38,6 +38,9 @@ class GodContainer extends React.Component {
       userSubmittedText: event.target.value
     }, () => {console.log("user in state", this.state.userSubmittedText)})
   }
+//////WORKING ON BETTER SUBMIT RESPONSES/////////
+
+///////////////
 
 // EASILY ADD ADDITIONAL SASS STATEMENTS AT THE BOTTOM OF THIS FUNCTION
   userPressingEnterToSubmit = (event) => {
