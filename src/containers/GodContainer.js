@@ -16,7 +16,7 @@ class GodContainer extends React.Component {
       submissionErrorNumber: 0,
     }
   }
-
+// FETCH NOT WORKING RIGT STILL (BUT GETS RESPONSE)
   userSubmitsLocation = (event) => {
     console.log("clicked!");
     // debugger
