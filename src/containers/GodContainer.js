@@ -14,6 +14,9 @@ class GodContainer extends React.Component {
       submissionErrorText: "",
       submissionError: false,
       submissionErrorNumber: 0,
+      clickedBetterSubmit: false,
+      clickedBetterSubmitNumber: 0,
+      clickedBetterSubmitText: "",
     }
   }
 // FETCH NOT WORKING RIGT STILL (BUT GETS RESPONSE)
@@ -99,7 +102,7 @@ class GodContainer extends React.Component {
       <div id='god-container'>
         <Display textDisplayed={this.state.textDisplayed}/>
         <br/>
-        <UserInput getUserInput={this.getUserInput} userPressingEnterToSubmit={this.userPressingEnterToSubmit} submissionError={this.state.submissionError} submissionErrorText={this.state.submissionErrorText} userSubmitsLocation={this.userSubmitsLocation}/>
+        <UserInput getUserInput={this.getUserInput} userPressingEnterToSubmit={this.userPressingEnterToSubmit} submissionError={this.state.submissionError} submissionErrorText={this.state.submissionErrorText} userSubmitsLocation={this.userSubmitsLocation} clickedBetterSubmit={this.state.clickedBetterSubmit} clickedBetterSubmitText={this.state.clickedBetterSubmitText}/>
       </div>
     )
   }

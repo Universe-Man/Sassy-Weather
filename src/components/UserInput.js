@@ -22,6 +22,15 @@ class UserInput extends React.Component {
             </React.Fragment>
           )}
           <button id='user-submit-1' type='button' onClick={this.props.userSubmitsLocation}>Submit</button> -OR- <button id='user-submit-2' type='button'>Better Submit</button>
+          {(this.props.clickedBetterSubmit === false) ? ( null ) : (
+            <React.Fragment>
+              <br/>
+              <br/>
+              {this.props.clickedBetterSubmitText}
+              <br/>
+              <br/>
+            </React.Fragment>
+          )}
         </form>
       </div>
     )
