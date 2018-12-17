@@ -28,9 +28,10 @@ class GodContainer extends React.Component {
     // fetch(`http://api.openweathermap.org/data/2.5/weather?id=${location_id}&appid=${APIKEY}`)
     //   .then(res => res.json())
     //   .then(json => console.log("fetched!", json))
-    let cityName = "berlin"
-    let countryName = "germany"
-    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${cityName},${countryName}&appid=${APIKEY}`)
+    let cityName = this.state.userSubmittedText
+    // US ONLY FOR NOW
+    // let countryName = "germany" //,${countryName}//
+    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${APIKEY}`)
       .then(res => res.json())
       .then(json => console.log("fetched!", json))
   }
