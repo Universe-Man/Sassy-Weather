@@ -19,11 +19,11 @@ class GodContainer extends React.Component {
       clickedBetterSubmitText: "",
     }
   }
-// FETCH NOT WORKING RIGT STILL (BUT GETS RESPONSE)
+
   userSubmitsLocation = (event) => {
     console.log("clicked!");
     let location_id = "5333180"
-    fetch(`http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=f617c0219a716da6b8495f3be12cbaf1`)
+    fetch(`http://api.openweathermap.org/data/2.5/forecast?id=${location_id}&appid=${APIKEY}`)
       .then(res => res.json())
       .then(json => console.log("fetched!", json))
   }
