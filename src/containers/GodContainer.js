@@ -22,11 +22,9 @@ class GodContainer extends React.Component {
 // FETCH NOT WORKING RIGT STILL (BUT GETS RESPONSE)
   userSubmitsLocation = (event) => {
     console.log("clicked!");
-    // debugger
     let location_id = "5333180"
-    // debugger
     fetch(`http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=f617c0219a716da6b8495f3be12cbaf1`)
-      // .then(res => res.json())
+      .then(res => res.json())
       .then(json => console.log("fetched!", json))
   }
 
