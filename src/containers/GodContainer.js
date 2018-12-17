@@ -24,6 +24,10 @@ class GodContainer extends React.Component {
 // FETCH BY CITY NAME (NOT ID) FOR NOW
   userSubmitsLocation = (event) => {
     console.log("clicked!");
+    this.setState({
+      submissionError: false,
+      submissionErrorNumber: 0,
+    })
     // let location_id = "5333180"
     // fetch(`http://api.openweathermap.org/data/2.5/weather?id=${location_id}&appid=${APIKEY}`)
     //   .then(res => res.json())
@@ -36,8 +40,16 @@ class GodContainer extends React.Component {
       .then(json => console.log("fetched!", json))
   }
 
+// ADD SASS AND EXTRA BUTTONS LATER
+  userBetterSubmits = (event) => {
+    console.log("butt");
+    this.setState({
+      submissionError: false,
+      submissionErrorNumber: 0,
+    })
+  }
 
-
+// when pressed numbererror to 0 and error false
 
   getUserInput = (event) => {
     this.setState({
@@ -111,7 +123,7 @@ class GodContainer extends React.Component {
       <div id='god-container'>
         <Display textDisplayed={this.state.textDisplayed}/>
         <br/>
-        <UserInput getUserInput={this.getUserInput} userPressingEnterToSubmit={this.userPressingEnterToSubmit} submissionError={this.state.submissionError} submissionErrorText={this.state.submissionErrorText} userSubmitsLocation={this.userSubmitsLocation} clickedBetterSubmit={this.state.clickedBetterSubmit} clickedBetterSubmitText={this.state.clickedBetterSubmitText}/>
+        <UserInput getUserInput={this.getUserInput} userPressingEnterToSubmit={this.userPressingEnterToSubmit} userBetterSubmits={this.userBetterSubmits} submissionError={this.state.submissionError} submissionErrorText={this.state.submissionErrorText} userSubmitsLocation={this.userSubmitsLocation} clickedBetterSubmit={this.state.clickedBetterSubmit} clickedBetterSubmitText={this.state.clickedBetterSubmitText}/>
       </div>
     )
   }
