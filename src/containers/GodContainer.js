@@ -5,6 +5,7 @@ import UserInput from '../components/UserInput.js';
 let location_id = ""
 let cityName = ""
 let countryName = ""
+// let fetchedCity = {}
 const APIKEY = "f617c0219a716da6b8495f3be12cbaf1"
 
 class GodContainer extends React.Component {
@@ -19,6 +20,7 @@ class GodContainer extends React.Component {
       clickedBetterSubmit: false,
       clickedBetterSubmitNumber: 0,
       clickedBetterSubmitText: "",
+      fetchedCity: {},
     }
   }
 // FETCH BY CITY NAME (NOT ID) FOR NOW
@@ -37,7 +39,13 @@ class GodContainer extends React.Component {
     // let countryName = "germany" //,${countryName}//
     fetch(`http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${APIKEY}`)
       .then(res => res.json())
-      .then(json => console.log("fetched!", json))
+      .then(json => this.saveCityInState(json))
+  }
+
+  saveCityInState = (city) => {
+    this.setState({
+      fetchedCity: city
+    }, console.log("oignriungejingejfne", this.state.fetchedCity))
   }
 
 // ADD SASS AND EXTRA BUTTONS LATER
