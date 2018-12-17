@@ -3,6 +3,8 @@ import GodContainerCSS from '../assets/GodContainerCSS.css';
 import Display from '../components/Display.js';
 import UserInput from '../components/UserInput.js';
 let location_id = ""
+let cityName = ""
+let countryName = ""
 const APIKEY = "f617c0219a716da6b8495f3be12cbaf1"
 
 class GodContainer extends React.Component {
@@ -19,11 +21,16 @@ class GodContainer extends React.Component {
       clickedBetterSubmitText: "",
     }
   }
-
+// FETCH BY CITY NAME (NOT ID) FOR NOW
   userSubmitsLocation = (event) => {
     console.log("clicked!");
-    let location_id = "5333180"
-    fetch(`http://api.openweathermap.org/data/2.5/forecast?id=${location_id}&appid=${APIKEY}`)
+    // let location_id = "5333180"
+    // fetch(`http://api.openweathermap.org/data/2.5/weather?id=${location_id}&appid=${APIKEY}`)
+    //   .then(res => res.json())
+    //   .then(json => console.log("fetched!", json))
+    let cityName = "berlin"
+    let countryName = "germany"
+    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${cityName},${countryName}&appid=${APIKEY}`)
       .then(res => res.json())
       .then(json => console.log("fetched!", json))
   }
