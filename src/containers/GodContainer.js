@@ -129,7 +129,7 @@ class GodContainer extends React.Component {
   render() {
     return(
       <div id='god-container'>
-        <Display textDisplayed={this.state.textDisplayed}/>
+        <Display textDisplayed={this.state.textDisplayed} fetchedCity={this.state.fetchedCity}/>
         <br/>
         <UserInput getUserInput={this.getUserInput} userPressingEnterToSubmit={this.userPressingEnterToSubmit} userBetterSubmits={this.userBetterSubmits} submissionError={this.state.submissionError} submissionErrorText={this.state.submissionErrorText} userSubmitsLocation={this.userSubmitsLocation} clickedBetterSubmit={this.state.clickedBetterSubmit} clickedBetterSubmitText={this.state.clickedBetterSubmitText}/>
       </div>

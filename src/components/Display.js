@@ -4,9 +4,14 @@ import DisplayCSS from '../assets/DisplayCSS.css';
 const Display = (props) => {
   return(
     <div id='display'>
-      yay today!!
-      <br/>
+      {(props.fetchedCity === {}) ? (
+        <React.Fragment>
       {props.textDisplayed}
+        </React.Fragment>) : (
+          <React.Fragment>
+        {props.fetchedCity.name}
+        </React.Fragment>
+      )}
     </div>
   )
 }
