@@ -4,7 +4,9 @@ import UserInputCSS from '../assets/UserInputCSS.css';
 class UserInput extends React.Component {
   constructor() {
     super();
-    this.state = {}
+    this.state = {
+      FCtempSwitch: "hi"
+    }
   }
 
   render() {
@@ -12,6 +14,7 @@ class UserInput extends React.Component {
       <div id='user-input-div'>
         <form onSubmit={this.props.userPressingEnterToSubmit}>
           <input id='user-input-field' onChange={this.props.getUserInput}  autoFocus='autofocus' type='text' placeholder='Enter Location'/>
+            <button id='f-to-c-temp-button' type='button'>{this.state.FCtempSwitch}</button>
           <br/>
           <br/>
           {(this.props.submissionError === false) ? ( null ) : (
