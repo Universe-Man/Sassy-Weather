@@ -5,6 +5,7 @@ import UserInput from '../components/UserInput.js';
 let location_id = ""
 let cityName = ""
 let countryName = ""
+let cityTempAtScale = 0
 // let fetchedCity = {}
 const APIKEY = "f617c0219a716da6b8495f3be12cbaf1"
 
@@ -44,10 +45,24 @@ class GodContainer extends React.Component {
       .then(json => this.saveCityInState(json))
   }
 
+  changeTempKtoFC = () => {
+    if (this.state.FCtempSwitch === "F°") {
+      cityTempAtScale = this.state.fetchedCity.main.temp * 9/5 - 459.67
+
+
+    } else {
+      cityTempAtScale = this.state.fetchedCity.main.temp - 273.15
+    }
+  }
+
+
+///// NOT DEFINED ISSUE!!
+
   saveCityInState = (city) => {
     this.setState({
       fetchedCity: city
-    }, console.log("oignriungejingejfne", this.state.fetchedCity))
+    })
+    changeTempKtoFC();
   }
 
 // ADD SASS AND EXTRA BUTTONS LATER
