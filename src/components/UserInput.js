@@ -4,29 +4,16 @@ import UserInputCSS from '../assets/UserInputCSS.css';
 class UserInput extends React.Component {
   constructor() {
     super();
-    this.state = {
-      FCtempSwitch: "F°"
-    }
+    this.state = {}
   }
 
-  toggleTempScale = () => {
-    if (this.state.FCtempSwitch === "F°") {
-      this.setState({
-        FCtempSwitch: "C°"
-      })
-    } else {
-      this.setState({
-        FCtempSwitch: "F°"
-      })
-    }
-  }
 
   render() {
     return(
       <div id='user-input-div'>
         <form onSubmit={this.props.userPressingEnterToSubmit}>
           <input id='user-input-field' onChange={this.props.getUserInput}  autoFocus='autofocus' type='text' placeholder='Enter Location'/>
-          <button id='f-to-c-temp-button' type='button' onClick={this.toggleTempScale}>{this.state.FCtempSwitch}</button>
+          <button id='f-to-c-temp-button' type='button' onClick={this.props.toggleTempScale}>{this.props.FCtempSwitch}</button>
           <br/>
           <br/>
           {(this.props.submissionError === false) ? ( null ) : (

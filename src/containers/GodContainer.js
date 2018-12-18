@@ -22,6 +22,7 @@ class GodContainer extends React.Component {
       clickedBetterSubmitText: "",
       fetchedCity: {},
       weatherSassStatement: "Actually going outside for once? Check the weather!",
+      FCtempSwitch: "F°",
     }
   }
 // FETCH BY CITY NAME (NOT ID) FOR NOW
@@ -126,13 +127,25 @@ class GodContainer extends React.Component {
     }
   }
 
+  toggleTempScale = () => {
+    if (this.state.FCtempSwitch === "F°") {
+      this.setState({
+        FCtempSwitch: "C°"
+      })
+    } else {
+      this.setState({
+        FCtempSwitch: "F°"
+      })
+    }
+  }
+
 
   render() {
     return(
       <div id='god-container'>
         <Display textDisplayed={this.state.textDisplayed} fetchedCity={this.state.fetchedCity} weatherSassStatement={this.state.weatherSassStatement} />
         <br/>
-        <UserInput getUserInput={this.getUserInput} userPressingEnterToSubmit={this.userPressingEnterToSubmit} userBetterSubmits={this.userBetterSubmits} submissionError={this.state.submissionError} submissionErrorText={this.state.submissionErrorText} userSubmitsLocation={this.userSubmitsLocation} clickedBetterSubmit={this.state.clickedBetterSubmit} clickedBetterSubmitText={this.state.clickedBetterSubmitText} />
+        <UserInput getUserInput={this.getUserInput} userPressingEnterToSubmit={this.userPressingEnterToSubmit} userBetterSubmits={this.userBetterSubmits} submissionError={this.state.submissionError} submissionErrorText={this.state.submissionErrorText} userSubmitsLocation={this.userSubmitsLocation} clickedBetterSubmit={this.state.clickedBetterSubmit} clickedBetterSubmitText={this.state.clickedBetterSubmitText} FCtempSwitch={this.state.FCtempSwitch} toggleTempScale={this.toggleTempScale}/>
       </div>
     )
   }
