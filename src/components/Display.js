@@ -10,10 +10,8 @@ const Display = (props) => {
         </React.Fragment>
       ) : (
         <React.Fragment>
-          <h4>{props.weatherSassStatement}</h4>
-          {props.fetchedCity.name}
-          {props.fetchedCity.main.temp}
-
+          <h5>{props.weatherSassStatement}</h5>
+          {props.fetchedCity.name} / {props.fetchedCity.main.temp} {props.FCtempSwitch}
         </React.Fragment>
       )}
     </div>
