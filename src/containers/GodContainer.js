@@ -20,7 +20,7 @@ class GodContainer extends React.Component {
       clickedBetterSubmit: false,
       clickedBetterSubmitNumber: 0,
       clickedBetterSubmitText: "",
-      fetchedCity: {},
+      fetchedCity: undefined,
       weatherSassStatement: "Actually going outside for once? Check the weather!",
       FCtempSwitch: "F°",
     }

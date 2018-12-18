@@ -4,7 +4,7 @@ import DisplayCSS from '../assets/DisplayCSS.css';
 const Display = (props) => {
   return(
     <div id='display'>
-      {(props.fetchedCity === {}) ? (
+      {(props.fetchedCity === undefined) ? (
         <React.Fragment>
           {props.textDisplayed}
         </React.Fragment>
@@ -12,6 +12,7 @@ const Display = (props) => {
         <React.Fragment>
           <h4>{props.weatherSassStatement}</h4>
           {props.fetchedCity.name}
+          {props.fetchedCity.main.temp}
 
         </React.Fragment>
       )}
