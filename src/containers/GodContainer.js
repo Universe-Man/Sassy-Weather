@@ -150,11 +150,11 @@ class GodContainer extends React.Component {
     if (this.state.FCtempSwitch === "F°") {
       this.setState({
         FCtempSwitch: "C°"
-      })
+      }, this.changeTempKtoFC())
     } else {
       this.setState({
         FCtempSwitch: "F°"
-      })
+      }, this.changeTempKtoFC())
     }
   }
 
