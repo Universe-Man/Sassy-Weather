@@ -53,8 +53,9 @@ class GodContainer extends React.Component {
     } else {
       cityTempAtScale = this.state.fetchedCity.main.temp - 273.15
     }
+    let round = Math.round(cityTempAtScale);
     this.setState({
-      cityTempAtScale: cityTempAtScale
+      cityTempAtScale: round
     })
   }
 
