@@ -63,7 +63,13 @@ class GodContainer extends React.Component {
     if (this.state.fetchedCity.main.temp <= 263) {
       // -10C FREEZING WHY TO YOU LIVE OR VISIT HERE
     } else if (this.state.fetchedCity.main.temp > 263 && this.state.fetchedCity.main.temp <= 278) {
-      // up to 5C
+      // up to 5C 40.7F
+    } else if (this.state.fetchedCity.main.temp > 278 && this.state.fetchedCity.main.temp <= 286) {
+      // up to 55F
+    } else if (this.state.fetchedCity.main.temp > 286 && this.state.fetchedCity.main.temp <= 294) {
+      // up to 70F
+    } else if (this.state.fetchedCity.main.temp > 294 && this.state.fetchedCity.main.temp <= 300) {
+      // up to 80F
     }
   }
 
