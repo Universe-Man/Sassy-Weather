@@ -58,7 +58,7 @@ class GodContainer extends React.Component {
       cityTempAtScale: round
     })
   }
-
+// UNFINISHED ADD THIS.SETSTATE IN EACH WITH NEW SASS STATEMENT REFLECTING THE TEMPERATURE
   changeSassStatement = () => {
     if (this.state.fetchedCity.main.temp <= 263) {
       // -10C FREEZING WHY TO YOU LIVE OR VISIT HERE
@@ -70,10 +70,18 @@ class GodContainer extends React.Component {
       // up to 70F
     } else if (this.state.fetchedCity.main.temp > 294 && this.state.fetchedCity.main.temp <= 300) {
       // up to 80F
+    } else if (this.state.fetchedCity.main.temp > 300 && this.state.fetchedCity.main.temp <= 305) {
+      // up to 90F
+    } else if (this.state.fetchedCity.main.temp > 305 && this.state.fetchedCity.main.temp <= 311) {
+      // up to 100F
+    } else if (this.state.fetchedCity.main.temp > 311 && this.state.fetchedCity.main.temp <= 316) {
+      // up to 110F
+    } else if (this.state.fetchedCity.main.temp > 316) {
+      // over 110F SUPER HOT WHAT IS WRONG WITH YOU!!?!?
     }
   }
 
-///// NOT DEFINED ISSUE!!
+///// NOT DEFINED ISSUE!! (needed this. in front *duh!*)
 
   saveCityInState = (city) => {
     this.setState({
