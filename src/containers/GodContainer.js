@@ -50,7 +50,7 @@ class GodContainer extends React.Component {
     let cityTempAtScale = 0
     if (this.state.FCtempSwitch === "F°") {
       cityTempAtScale = this.state.fetchedCity.main.temp * 9/5 - 459.67
-    } else {
+    } else if (this.state.FCtempSwitch === "C°") {
       cityTempAtScale = this.state.fetchedCity.main.temp - 273.15
     }
     let round = Math.round(cityTempAtScale);
