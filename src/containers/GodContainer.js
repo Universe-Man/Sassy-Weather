@@ -46,12 +46,15 @@ class GodContainer extends React.Component {
   }
 
   changeTempKtoFC = () => {
+    debugger
     if (this.state.FCtempSwitch === "F°") {
       cityTempAtScale = this.state.fetchedCity.main.temp * 9/5 - 459.67
-
+debugger
 
     } else {
+      debugger
       cityTempAtScale = this.state.fetchedCity.main.temp - 273.15
+      debugger
     }
   }
 
@@ -62,7 +65,7 @@ class GodContainer extends React.Component {
     this.setState({
       fetchedCity: city
     })
-    changeTempKtoFC();
+    this.changeTempKtoFC();
   }
 
 // ADD SASS AND EXTRA BUTTONS LATER
