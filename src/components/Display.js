@@ -12,7 +12,7 @@ const Display = (props) => {
       ) : (
         <React.Fragment>
           <h5>{props.weatherSassStatement}</h5>
-          {props.fetchedCity.name} / {props.fetchedCity.main.temp} {props.FCtempSwitch}
+          {props.fetchedCity.name} / {props.cityTempAtScale} {props.FCtempSwitch}
         </React.Fragment>
       )}
     </div>
