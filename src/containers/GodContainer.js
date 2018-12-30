@@ -59,6 +59,13 @@ class GodContainer extends React.Component {
     })
   }
 
+  changeSassStatement = () => {
+    if (this.state.fetchedCity.main.temp <= 263) {
+      // -10C FREEZING WHY TO YOU LIVE OR VISIT HERE
+    } else if (this.state.fetchedCity.main.temp > 263 && this.state.fetchedCity.main.temp <= 278) {
+      // up to 5C
+    }
+  }
 
 ///// NOT DEFINED ISSUE!!
 
@@ -67,6 +74,7 @@ class GodContainer extends React.Component {
       fetchedCity: city
     })
     this.changeTempKtoFC();
+    this.changeSassStatement();
   }
 
 // ADD SASS AND EXTRA BUTTONS LATER
@@ -105,7 +113,8 @@ class GodContainer extends React.Component {
       case 1:
         this.setState({
           submissionErrorText: "No, you can't press enter to submit. You gotta click a button. Capisce?",
-          submissionErrorNumber: 2
+
+        submissionErrorNumber: 2
         })
         break;
       case 2:
