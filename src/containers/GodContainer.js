@@ -13,7 +13,7 @@ class GodContainer extends React.Component {
   constructor() {
     super();
     this.state = {
-      textDisplayed: "oh my gerd!!",
+      textDisplayed: "Wow!! You're actually going outside for once!? Check the weather!",
       userSubmittedText: "",
       submissionErrorText: "",
       submissionError: false,
