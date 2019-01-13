@@ -66,13 +66,13 @@ class GodContainer extends React.Component {
       })
       // -10C FREEZING WHY TO YOU LIVE OR VISIT HERE
     } else if (this.state.fetchedCity.main.temp > 263 && this.state.fetchedCity.main.temp <= 278) {
-      // this.setState({
-      //   weatherSassStatement:
-      // })  // up to 5C 40.7F
+      this.setState({
+        weatherSassStatement: "It's pretty fucking cold honestly. You should defintely wear a jacket or coat or something."
+      })  // up to 5C 40.7F
     } else if (this.state.fetchedCity.main.temp > 278 && this.state.fetchedCity.main.temp <= 286) {
-      // this.setState({
-      //   weatherSassStatement:
-      // })  // up to 55F
+      this.setState({
+        weatherSassStatement: "It's a bit chilly, lite jacket or hoodie should be fine, but ya know don't blame me if we get there and you're like 'It's too cold!!' so just do whatever I guess."
+      })  // up to 55F
     } else if (this.state.fetchedCity.main.temp > 286 && this.state.fetchedCity.main.temp <= 294) {
       // this.setState({
       //   weatherSassStatement:
