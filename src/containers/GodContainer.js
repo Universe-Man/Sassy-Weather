@@ -22,7 +22,7 @@ class GodContainer extends React.Component {
       clickedBetterSubmitNumber: 0,
       clickedBetterSubmitText: "",
       fetchedCity: undefined,
-      weatherSassStatement: "Actually going outside for once? Check the weather!",
+      weatherSassStatement: "Butthole!",
       FCtempSwitch: "F°",
       cityTempAtScale: undefined,
     }
@@ -61,23 +61,42 @@ class GodContainer extends React.Component {
 // UNFINISHED ADD THIS.SETSTATE IN EACH WITH NEW SASS STATEMENT REFLECTING THE TEMPERATURE
   changeSassStatement = () => {
     if (this.state.fetchedCity.main.temp <= 263) {
+      this.setState({
+        weatherSassStatement: "AWWWW HELL NO!! WHY ARE YOU HERE!?!?....damn it cold, bro....it cold."
+      })
       // -10C FREEZING WHY TO YOU LIVE OR VISIT HERE
     } else if (this.state.fetchedCity.main.temp > 263 && this.state.fetchedCity.main.temp <= 278) {
-      // up to 5C 40.7F
+      // this.setState({
+      //   weatherSassStatement:
+      // })  // up to 5C 40.7F
     } else if (this.state.fetchedCity.main.temp > 278 && this.state.fetchedCity.main.temp <= 286) {
-      // up to 55F
+      // this.setState({
+      //   weatherSassStatement:
+      // })  // up to 55F
     } else if (this.state.fetchedCity.main.temp > 286 && this.state.fetchedCity.main.temp <= 294) {
-      // up to 70F
+      // this.setState({
+      //   weatherSassStatement:
+      // })  // up to 70F
     } else if (this.state.fetchedCity.main.temp > 294 && this.state.fetchedCity.main.temp <= 300) {
-      // up to 80F
+      // this.setState({
+      //   weatherSassStatement:
+      // })  // up to 80F
     } else if (this.state.fetchedCity.main.temp > 300 && this.state.fetchedCity.main.temp <= 305) {
-      // up to 90F
+      // this.setState({
+      //   weatherSassStatement:
+      // })  // up to 90F
     } else if (this.state.fetchedCity.main.temp > 305 && this.state.fetchedCity.main.temp <= 311) {
-      // up to 100F
+      // this.setState({
+      //   weatherSassStatement:
+      // })  // up to 100F
     } else if (this.state.fetchedCity.main.temp > 311 && this.state.fetchedCity.main.temp <= 316) {
-      // up to 110F
+      // this.setState({
+      //   weatherSassStatement:
+      // })  // up to 110F
     } else if (this.state.fetchedCity.main.temp > 316) {
-      // over 110F SUPER HOT WHAT IS WRONG WITH YOU!!?!?
+      // this.setState({
+      //   weatherSassStatement:
+      // })  // over 110F SUPER HOT WHAT IS WRONG WITH YOU!!?!?
     }
   }
 
