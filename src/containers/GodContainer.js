@@ -74,29 +74,29 @@ class GodContainer extends React.Component {
         weatherSassStatement: "It's a bit chilly, lite jacket or hoodie should be fine, but ya know don't blame me if we get there and you're like 'It's too cold!!' so just do whatever I guess."
       })  // up to 55F
     } else if (this.state.fetchedCity.main.temp > 286 && this.state.fetchedCity.main.temp <= 294) {
-      // this.setState({
-      //   weatherSassStatement:
-      // })  // up to 70F
+      this.setState({
+        weatherSassStatement: "Hey it's actually pretty nice out!.....hmmm...."
+      })  // up to 70F
     } else if (this.state.fetchedCity.main.temp > 294 && this.state.fetchedCity.main.temp <= 300) {
-      // this.setState({
-      //   weatherSassStatement:
-      // })  // up to 80F
+      this.setState({
+        weatherSassStatement: "It's a bit toasty."
+      })  // up to 80F
     } else if (this.state.fetchedCity.main.temp > 300 && this.state.fetchedCity.main.temp <= 305) {
-      // this.setState({
-      //   weatherSassStatement:
-      // })  // up to 90F
+      this.setState({
+        weatherSassStatement: "Yeah, it's hot outside."
+      })  // up to 90F
     } else if (this.state.fetchedCity.main.temp > 305 && this.state.fetchedCity.main.temp <= 311) {
-      // this.setState({
-      //   weatherSassStatement:
-      // })  // up to 100F
+      this.setState({
+        weatherSassStatement: "Damn bro, it's fuckin' hot outside."
+      })  // up to 100F
     } else if (this.state.fetchedCity.main.temp > 311 && this.state.fetchedCity.main.temp <= 316) {
-      // this.setState({
-      //   weatherSassStatement:
-      // })  // up to 110F
+      this.setState({
+        weatherSassStatement: "Dude! What the hell!? (pun intended) It's ridiculously hot outside. Blast that A/C bro!"
+      })  // up to 110F
     } else if (this.state.fetchedCity.main.temp > 316) {
-      // this.setState({
-      //   weatherSassStatement:
-      // })  // over 110F SUPER HOT WHAT IS WRONG WITH YOU!!?!?
+      this.setState({
+        weatherSassStatement: "** removes glasses ** ....my God......am I in the center of the Sun?"
+      })  // over 110F SUPER HOT WHAT IS WRONG WITH YOU!!?!?
     }
   }
 
