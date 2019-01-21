@@ -29,7 +29,13 @@ class GodContainer extends React.Component {
   }
 // FETCH BY CITY NAME (NOT ID) FOR NOW
   userSubmitsLocation = (event) => {
-    console.log("clicked!");
+    // console.log("clicked!");
+    if (this.state.userSubmittedText === "" || this.state.userSubmittedText === undefined) {
+      this.setState({
+        textDisplayed: "Please enter an actually city.....ya turd."
+      })
+      return
+    }
     this.setState({
       submissionError: false,
       submissionErrorNumber: 0,
