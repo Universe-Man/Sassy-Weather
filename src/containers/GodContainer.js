@@ -114,10 +114,11 @@ class GodContainer extends React.Component {
 
 // ADD SASS AND EXTRA BUTTONS LATER
   userBetterSubmits = (event) => {
-    console.log("butt");
+    // console.log("butt");
     this.setState({
       submissionError: false,
       submissionErrorNumber: 0,
+      textDisplayed: "Really bro? Regular submit isn't good enough? Jerk."
     })
   }
 
