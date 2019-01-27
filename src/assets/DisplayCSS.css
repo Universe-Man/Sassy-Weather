@@ -10,6 +10,8 @@
   transition: background-color 3s;
 }
 
+/* ADD MORE TEMPERATURE SUBSETS BELOW AND IN FUNCTION */
+
 .displayCold {
   background-color: blue;
 }

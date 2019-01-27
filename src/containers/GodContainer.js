@@ -53,8 +53,7 @@ class GodContainer extends React.Component {
       .then(json => this.saveCityInState(json))
   }
 
-/////////////////
-
+  // ADD MORE TEMPERATURE SUBSETS BELOW AND IN CSS
   changeDisplayBGcolor = () => {
     const display = document.getElementById('display');
     // console.log(this.state.fetchedCity);
@@ -69,25 +68,25 @@ class GodContainer extends React.Component {
       display.classList.toggle('displayCold');
       // up to 5C 40.7F
     } else if (this.state.fetchedCity.main.temp > 278 && this.state.fetchedCity.main.temp <= 286) {
-
+      display.classList.toggle('displayCold');
       // up to 55F
     } else if (this.state.fetchedCity.main.temp > 286 && this.state.fetchedCity.main.temp <= 294) {
-
+      display.classList.toggle('displayNice');
       // up to 70F
     } else if (this.state.fetchedCity.main.temp > 294 && this.state.fetchedCity.main.temp <= 300) {
-
+      display.classList.toggle('displayNice');
      // up to 80F
     } else if (this.state.fetchedCity.main.temp > 300 && this.state.fetchedCity.main.temp <= 305) {
-
+      display.classList.toggle('displayWarm');
     // up to 90F
     } else if (this.state.fetchedCity.main.temp > 305 && this.state.fetchedCity.main.temp <= 311) {
-
+      display.classList.toggle('displayHot');
      // up to 100F
     } else if (this.state.fetchedCity.main.temp > 311 && this.state.fetchedCity.main.temp <= 316) {
-
+      display.classList.toggle('displayHot');
     // up to 110F
     } else if (this.state.fetchedCity.main.temp > 316) {
-
+      display.classList.toggle('displayHot');
     // over 110F SUPER HOT WHAT IS WRONG WITH YOU!!?!?
     }
   }
