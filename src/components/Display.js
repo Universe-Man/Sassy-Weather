@@ -4,7 +4,7 @@ import DisplayCSS from '../assets/DisplayCSS.css';
 const Display = (props) => {
 
   return(
-    <div id='display'>
+    <div id='display' className='display'>
       {(props.fetchedCity === undefined) ? (
         <React.Fragment>
           {props.textDisplayed}
