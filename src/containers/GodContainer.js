@@ -56,16 +56,17 @@ class GodContainer extends React.Component {
 /////////////////
 
   changeDisplayBGcolor = () => {
-    console.log(this.state.fetchedCity);
-    console.log("hi", document.getElementById('display'));
+    const display = document.getElementById('display');
+    // console.log(this.state.fetchedCity);
+    // console.log("hi", display);
     // if (city temp is cold, nice, warm, or hot) {
     //   toggleCSSclassname
     // }
     if (this.state.fetchedCity.main.temp <= 263) {
-
+      display.classList.toggle('displayCold');
       // -10C
     } else if (this.state.fetchedCity.main.temp > 263 && this.state.fetchedCity.main.temp <= 278) {
-
+      display.classList.toggle('displayCold');
       // up to 5C 40.7F
     } else if (this.state.fetchedCity.main.temp > 278 && this.state.fetchedCity.main.temp <= 286) {
 
