@@ -15,13 +15,14 @@
 }
 
 .displayNice {
-
+  background-color: green;
 }
 
 .displayWarm {
-
+  background-color: orange;
+  /* background-color: yellow; */
 }
 
 .displayHot {
-
+  background-color: red;
 }
