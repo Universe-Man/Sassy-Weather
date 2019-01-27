@@ -2,12 +2,13 @@ import React from 'react';
 import GodContainerCSS from '../assets/GodContainerCSS.css';
 import Display from '../components/Display.js';
 import UserInput from '../components/UserInput.js';
-let location_id = ""
-let cityName = ""
-let countryName = ""
-let cityTempAtScale = 0
-// let fetchedCity = {}
-const APIKEY = "f617c0219a716da6b8495f3be12cbaf1"
+let location_id = "";
+let cityName = "";
+let countryName = "";
+let cityTempAtScale = 0;
+// let fetchedCity = {};
+const APIKEY = "f617c0219a716da6b8495f3be12cbaf1";
+// const display = document.getElementById('display');
 
 class GodContainer extends React.Component {
   constructor() {
@@ -56,6 +57,7 @@ class GodContainer extends React.Component {
 
   changeDisplayBGcolor = () => {
     console.log(this.state.fetchedCity);
+    console.log("hi", document.getElementById('display'));
     // if (city temp is cold, nice, warm, or hot) {
     //   toggleCSSclassname
     // }
@@ -160,7 +162,6 @@ class GodContainer extends React.Component {
 
 // ADD SASS AND EXTRA BUTTONS LATER
   userBetterSubmits = (event) => {
-    // console.log("butt");
     this.setState({
       submissionError: false,
       submissionErrorNumber: 0,
@@ -173,7 +174,7 @@ class GodContainer extends React.Component {
   getUserInput = (event) => {
     this.setState({
       userSubmittedText: event.target.value
-    }, () => {console.log("user in state", this.state.userSubmittedText)})
+    });
   }
 //////WORKING ON BETTER SUBMIT RESPONSES/////////
 
