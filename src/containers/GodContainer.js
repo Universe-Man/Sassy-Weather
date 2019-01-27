@@ -52,6 +52,45 @@ class GodContainer extends React.Component {
       .then(json => this.saveCityInState(json))
   }
 
+/////////////////
+
+  changeDisplayBGcolor = () => {
+    console.log(this.state.fetchedCity);
+    // if (city temp is cold, nice, warm, or hot) {
+    //   toggleCSSclassname
+    // }
+    if (this.state.fetchedCity.main.temp <= 263) {
+
+      // -10C
+    } else if (this.state.fetchedCity.main.temp > 263 && this.state.fetchedCity.main.temp <= 278) {
+
+      // up to 5C 40.7F
+    } else if (this.state.fetchedCity.main.temp > 278 && this.state.fetchedCity.main.temp <= 286) {
+
+      // up to 55F
+    } else if (this.state.fetchedCity.main.temp > 286 && this.state.fetchedCity.main.temp <= 294) {
+
+      // up to 70F
+    } else if (this.state.fetchedCity.main.temp > 294 && this.state.fetchedCity.main.temp <= 300) {
+
+     // up to 80F
+    } else if (this.state.fetchedCity.main.temp > 300 && this.state.fetchedCity.main.temp <= 305) {
+
+    // up to 90F
+    } else if (this.state.fetchedCity.main.temp > 305 && this.state.fetchedCity.main.temp <= 311) {
+
+     // up to 100F
+    } else if (this.state.fetchedCity.main.temp > 311 && this.state.fetchedCity.main.temp <= 316) {
+
+    // up to 110F
+    } else if (this.state.fetchedCity.main.temp > 316) {
+
+    // over 110F SUPER HOT WHAT IS WRONG WITH YOU!!?!?
+    }
+  }
+
+////////////////
+
   changeTempKtoFC = () => {
     let cityTempAtScale = 0
     if (this.state.FCtempSwitch === "F°") {
@@ -116,6 +155,7 @@ class GodContainer extends React.Component {
     })
     this.changeTempKtoFC();
     this.changeSassStatement();
+    this.changeDisplayBGcolor();
   }
 
 // ADD SASS AND EXTRA BUTTONS LATER
