@@ -239,6 +239,12 @@ class GodContainer extends React.Component {
   }
 
   toggleTempScale = () => {
+    if (this.state.fetchedCity === undefined) {
+      this.setState({
+        textDisplayed: "You need to enter a city before you do that.....ya turd."
+      })
+      return
+    }
     if (this.state.FCtempSwitch === "F°") {
       this.setState({
         FCtempSwitch: "C°"
